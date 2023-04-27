@@ -10,8 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+# This is just a comment to see if this works
+# Let's test it
+
 from pathlib import Path
-from .configurations import db_values, STORED_SECRET_KEY
+from .configurations import db_values, STORED_SECRET_KEY, ALLOWED_CORS_HOSTS
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +29,7 @@ SECRET_KEY = STORED_SECRET_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ALLOWED_CORS_HOSTS
 
 
 # Application definition
@@ -161,9 +164,6 @@ REST_FRAMEWORK = {
     # )
 }
 
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    "http://127.0.0.1:3000"
-]
+CORS_ALLOWED_ORIGINS = ALLOWED_CORS_HOSTS
 
 CORS_ALLOW_ALL_ORIGINS: True
