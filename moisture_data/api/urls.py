@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import MoistureData
+from .views import MoistureDataAccess
 
 urlpatterns = [
-    path('add_moisture_data/', MoistureData.as_view())
+    path('add_moisture_data/', MoistureDataAccess.as_view())
 ]
