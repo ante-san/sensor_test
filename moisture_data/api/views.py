@@ -5,7 +5,7 @@ from rest_framework import status
 from .serializers import AddMoistureDataSerializer
 from moisture_data.models import MoistureData, Plant
 
-class MoistureData(APIView):
+class MoistureDataAccess(APIView):
 
     def post(self, request):
         serializer = AddMoistureDataSerializer(data=request.data)
