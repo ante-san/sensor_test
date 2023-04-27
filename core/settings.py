@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 # This is just a comment to see if this works
 # Let's test it
+# Let's do another test
 
 from pathlib import Path
 from .configurations import db_values, STORED_SECRET_KEY, CONF_ALLOWED_HOSTS, ALLOWED_CORS_HOSTS
